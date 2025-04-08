@@ -1,0 +1,65 @@
+---
+interface Project {
+  title: string;
+  description: string;
+  imageBefore: string;
+  imageAfter: string;
+  testimonial: {
+    text: string;
+    author: string;
+  };
+}
+
+const projects: Project[] = [
+  {
+    title: "Sistema de Sonido - Iglesia Central",
+    description: "Instalación completa de audio profesional",
+    imageBefore: "/projects/church-before.jpg",
+    imageAfter: "/projects/church-after.jpg",
+    testimonial: {
+      text: "La calidad del sonido superó nuestras expectativas. El equipo de JAD fue muy profesional.",
+      author: "Pastor Roberto Méndez"
+    }
+  },
+  {
+    title: "Remodelación Comercial",
+    description: "Renovación completa de espacio comercial",
+    imageBefore: "/projects/commercial-before.jpg",
+    imageAfter: "/projects/commercial-after.jpg",
+    testimonial: {
+      text: "Excelente trabajo y cumplimiento con los tiempos establecidos.",
+      author: "María González - Gerente"
+    }
+  }
+];
+---
+<section id="proyectos" class="py-20 bg-jad-black">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">
+      Proyectos <span class="text-jad-red">Realizados</span>
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      {projects.map((project, index) => (
+        <div class="bg-white rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="relative">
+            <div class="aspect-video">
+              <img src={project.imageAfter} alt={project.title} class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p class="text-gray-200">{project.description}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-6 bg-gray-50">
+            <blockquote class="italic text-gray-600">"{project.testimonial.text}"</blockquote>
+            <p class="mt-2 font-semibold text-jad-black">- {project.testimonial.author}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

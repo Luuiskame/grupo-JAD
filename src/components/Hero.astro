@@ -1,0 +1,53 @@
+---
+---
+<section class="relative h-screen flex items-center justify-center bg-jad-black overflow-hidden">
+  <!-- Animated background effect -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-jad-black via-jad-red/20 to-jad-black animate-pulse"></div>
+    <div class="absolute inset-0 bg-[url('/sound-waves.svg')] opacity-30 animate-wave"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Text Content -->
+      <div class="text-center md:text-left" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+          Transformamos Espacios con
+          <span class="text-jad-red">Tecnología y Precisión</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-8">
+          Sirviendo con excelencia en instalaciones de sonido, electricidad, tabla yeso y obra gris
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a 
+            href="#proyectos" 
+            class="bg-jad-red text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors"
+            data-aos="fade-right"
+          >
+            Ver Proyectos
+          </a>
+          <a 
+            href="https://wa.me/+50499999999?text=Hola,%20me%20interesa%20cotizar%20un%20proyecto" 
+            target="_blank"
+            class="bg-white text-jad-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors"
+            data-aos="fade-left"
+          >
+            Cotizar Ahora
+          </a>
+        </div>
+      </div>
+      
+      <!-- Image -->
+      <div class="relative" data-aos="fade-left">
+        <img 
+          src="/t.png" 
+          alt="Técnico profesional instalando sistema de sonido"
+          class="rounded-lg shadow-2xl w-full h-auto object-cover"
+          width="600"
+          height="400"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-jad-black/50 to-transparent rounded-lg"></div>
+      </div>
+    </div>
+  </div>
+</section>

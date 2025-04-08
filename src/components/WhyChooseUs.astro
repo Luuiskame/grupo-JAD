@@ -1,0 +1,53 @@
+---
+import Icon from 'astro-icon';
+
+const reasons = [
+  {
+    icon: "mdi:clock-check",
+    title: "Compromiso y Puntualidad",
+    description: "Cumplimos con los plazos establecidos en cada proyecto"
+  },
+  {
+    icon: "mdi:certificate",
+    title: "Materiales de Calidad",
+    description: "Trabajamos solo con los mejores materiales del mercado"
+  },
+  {
+    icon: "mdi:account-group",
+    title: "Personal Capacitado",
+    description: "Equipo profesional con amplia experiencia"
+  },
+  {
+    icon: "mdi:trophy",
+    title: "15 Años de Experiencia",
+    description: "Trayectoria comprobada en el mercado hondureño"
+  },
+  {
+    icon: "mdi:handshake",
+    title: "Atención Personalizada",
+    description: "Servicio adaptado a las necesidades de cada cliente"
+  }
+];
+---
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+      Por Qué <span class="text-jad-red">Elegirnos</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {reasons.map((reason, index) => (
+        <div 
+          class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="w-12 h-12 text-jad-red mb-4">
+          </div>
+          <h3 class="text-xl font-semibold mb-3">{reason.title}</h3>
+          <p class="text-gray-600">{reason.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
